@@ -8,10 +8,10 @@ from bson.objectid import ObjectId
 import MeCab as mc
 
 KEYS = {
-        'consumer_key':'GoRovpWFtE7gDnDSSNKipImWt',
-        'consumer_secret':'fxApsiXXQu1taSqFZdKpzIWujn1cFeY8xGmeoDlY1X5QSECZSl',
-        'access_token':'124660542-Vz0nuB6APuqmm8varDByMNOzq0Kx2z17S1pjJfox',
-        'access_secret':'4RvhRM4befO6IrNkE9FKSxiYutxVnnJlKDAwhQwptqGf4'
+        'consumer_key':'************',
+        'consumer_secret':'**************',
+        'access_token':'***************',
+        'access_secret':'******************'
         }
 
 twitter = None
