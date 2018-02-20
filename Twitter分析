@@ -1,0 +1,76 @@
+Twitter分析
+2018.2.19　更新
+
+#Twitter APIの確認方法
+1.Twitter Developerサイトにログインして: tadakazu1972@gmail.com, 以前のヤツ
+2.https://apps.twitter.comにアクセスしてappアカウントを管理
+
+#RでTwitter APIを叩くための基礎講座〜認証からツイート取得まで〜
+http://www.randpy.tokyo/entry/twitter_api_r
+
+#homebrewはインストール済みだった
+brew update 実行した 2018.2.19
+
+#mongoDB　インストール
+brew install mongodb
+mongodb 3.6.2 インストール 2018.2.19
+
+#/data/dbフォルダを作成
+sudo mkdir -p /data/db
+
+#/data/dbへ権限許可
+sudo chown ユーザー名 /data/db
+
+#mongodb開始
+mongod
+
+＃mongodb停止
+Ctrl+C
+
+#pipのためにpyenvをインストール
+https://qiita.com/1000ch/items/93841f76ea52551b6a97
+
+git clone git://github.com/yyuu/pyenv.git ~/.pyenv
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+
+bashを一旦終了して、再び起動させるとpyenvが使える
+
+#まずはインストールできるpythonのバージョンを確認
+https://qiita.com/crankcube@github/items/15f06b32ec56736fc43a
+pyenv install --list
+
+#pyhthon2.7.14と3.6.4をインストール 2018.2.19
+pyenv install 2.7.14
+pyenv install 3.6.4
+
+#pythonを指定
+pyenv global 3.6.4
+
+#-------------------------------------------------------------
+#スタバのTwitterデータをpythonで大量に取得し、データ分析を試みる その１
+https://qiita.com/kenmatsu4/items/23768cbe32fe381d54a2
+
+
+#認証ライブラリrequests_oauthlibをインストール
+pip install requests_oauthlib
+
+#mondoDBアクセスのためのライブラリpymongoをインストール
+pip install pymongo
+
+#pytzインストール　ブログでは事前にインストール書いていなかったが、必要
+pip install pytz
+
+#numpyインストール
+pip install numpy
+
+#MeCabインストール　以下のブログのやり方でやった 
+#先にbrewでmecabをインストールしないとpip mecab-python3がコケる
+https://qiita.com/taroc/items/b9afd914432da08dafc8
+
+brew install mecab
+brew install mecab-ipadic
+pip install mecab-python3
+
